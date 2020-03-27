@@ -1,0 +1,11 @@
+<h1>All Tags</h1>
+<table id="tags">
+  <% @tags.each do |tag| %>
+    <tr>
+      <td><%= link_to tag.name, tag_path(tag), class: "tag" %></td>
+      <% if logged_in? %>
+        <td><%= link_to "delete", tag_path(tag), method: :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

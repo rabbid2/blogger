@@ -1,0 +1,156 @@
+body {
+  background-color: #b0c4de;
+  font-family: 'Libre Baskerville', serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: MediumSlateBlue;
+}
+
+a:hover {
+  color: Plum;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 65%;
+  margin: 0 auto;
+  background: snow;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+#content {
+  clear: both;
+  font-size: 16px;
+  color: #5b557a
+}
+
+header {
+  width: 65%;
+  height: 20px;
+  padding: 20px 0;
+  margin: 0 auto;
+  background: MediumSlateBlue;
+  font-size: 16px;
+  color: snow;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  color: snow;
+  margin-right: 20px;
+}
+
+nav ul {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav {
+  width: 50%;
+}
+
+.flash {
+  padding-right: 40px;
+  width: 50%;
+  text-align: right;
+  background: MediumSlateBlue;
+  font-size: 16px;
+  color: snow;
+}
+
+p, h4, h3, h6, ul, table, .actions, ul {
+  padding: 0 40px;
+}
+
+hr {
+  color: MediumSlateBlue;
+  margin-top: 20px;
+}
+
+table {
+  padding: 0 25px;
+  border-spacing: 15px 5px;
+}
+
+h1, .comments h3 {
+  box-sizing: border-box;
+  width: 100%;
+  padding:  20px 40px;
+  background-color: MediumSlateBlue;
+  color: snow;
+}
+
+.img {
+  text-align: center;
+}
+
+.author {
+  margin: 0 auto;
+}
+
+.article_body, .article_title, .title, .text {
+  display: inline-block;
+  height: 1.2em;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 5px;
+}
+.article_body, .text {
+  width: 300px;
+}
+
+#articles {
+  margin-bottom: 30px;
+}
+
+#articles li {
+  background-color: Lavender;
+  list-style-position: inside;
+  color: #5b557a;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#articles li::marker {
+  font-size: 1.5em;
+  color: MediumSlateBlue;
+}
+
+.title, .text {
+  padding: 10px 0;
+}
+
+.title {
+  margin-left: 35px;
+}
+
+.text {
+  padding-left: 0;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.link {
+  box-sizing: border-box;
+  text-align: right;
+  width: 100%;
+}
