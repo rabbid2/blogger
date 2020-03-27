@@ -18,11 +18,9 @@
           <%= link_to tags_path do %>
             <li>Tags</li><!--
           --><% end %>
-          <% if logged_in? %>
-            <%= link_to authors_path do %>
-              <li>Authors</li><!--
-            --><% end %>
-          <% end %>
+          <%= link_to authors_path do %>
+            <li>Authors</li><!--
+          --><% end %>
       </nav>
       <div class="flash">
         <%= flash.notice %>

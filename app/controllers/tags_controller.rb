@@ -1,5 +1,12 @@
 class TagsController < ApplicationController
-  before_action :require_login, except: [:show, :index]
+  before_action :require_admin, except: [:show, :index]
+
+  def require_admin
+    if current_user && current_user.email != "admin@example.com"
+      redirect_back(fallback_location: root_path)
+      return false
+    end
+  end
 
   def show
     @tag = Tag.find (params[:id])

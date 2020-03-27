@@ -6,7 +6,9 @@
   <strong>Email:</strong>
   <%= @author.email %>
 </p>
-<p  class = "link"> 
-  <%= link_to 'Edit', edit_author_path(@author) %> |
+<p  class = "link">
+  <% if current_user && current_user.email == "admin@example.com"%>
+    <%= link_to 'Edit', edit_author_path(@author) %> | 
+  <% end %>
   <%= link_to 'Back', authors_path %>
 </p>

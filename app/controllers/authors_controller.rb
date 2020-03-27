@@ -1,11 +1,18 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
-  before_action :zero_authors_or_authenticated, only: [:new, :create] 
-  before_action :require_login, except: [:new, :create]
+  before_action :require_not_authenticated, only: [:new, :create]
+  before_action :require_admin, except: [:new, :create, :show, :index]
   
-  def zero_authors_or_authenticated
-    unless Author.count == 0 || current_user 
-      redirect_to root_path
+  def require_admin
+    if current_user && current_user.email != "admin@example.com"
+      redirect_back(fallback_location: root_path)
+      return false
+    end
+  end
+
+  def require_not_authenticated
+    if logged_in? 
+      redirect_back(fallback_location: root_path)
       return false
     end
   end
